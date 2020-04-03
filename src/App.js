@@ -6,13 +6,15 @@ import Footer from "./components/Footer";
 import BounceCombo from "./pages/BounceCombo";
 import BounceHouses from "./pages/BounceHouses";
 import HomePage from "./pages/HomePage";
-import Interactives from './pages/Interactives';
-import ObstacleCourse from './pages/ObstacleCourse';
-import SelfPickUp from './pages/SelfPickUp'
-
+import Interactives from "./pages/Interactives";
+import ObstacleCourse from "./pages/ObstacleCourse";
+import SelfPickUp from "./pages/SelfPickUp";
 
 import "./App.css";
-import { getContent, getFeaturedContent } from "./redux/managers/contentfulService";
+import {
+  getContent,
+  getFeaturedContent,
+} from "./redux/managers/contentfulService";
 import { pushContentfulData, contentfulError } from "./redux/actions";
 import ProductTemplate from "./templates/ProductTemplate";
 
@@ -31,13 +33,13 @@ class App extends Component {
       obstacles: [],
       self: [],
       slides: [],
-      water: []
+      water: [],
     };
 
     try {
       const data = await getContent();
       dispatch(getFeaturedContent(data.items));
-      data.items.forEach(item => {
+      data.items.forEach((item) => {
         let dataObject = {
           ...item.fields,
           type: item.sys.contentType.sys.id,
@@ -70,6 +72,8 @@ class App extends Component {
         {/* <Navbar /> */}
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/featured" exact component={HomePage} />
+          <Route path="/featured/:cat/:id" component={ProductTemplate} />
           <Route path="/BounceCombo" exact component={BounceCombo} />
           <Route path="/BounceCombo/:cat/:id" component={ProductTemplate} />
           <Route path="/BounceHouses" exact component={BounceHouses} />
@@ -87,6 +91,6 @@ class App extends Component {
   }
 }
 
-export default connect(state => ({
-  appState: state
+export default connect((state) => ({
+  appState: state,
 }))(App);

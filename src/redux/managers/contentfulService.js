@@ -23,7 +23,9 @@ export function getFeaturedContent(allContent) {
     let featuredArray = [];
     allContent
       .filter((item) => item.fields.featured)
-      .forEach((fi) => featuredArray.push(fi.fields));
+      .forEach((fi) =>
+        featuredArray.push({ ...fi.fields, type: fi.sys.contentType.sys.id })
+      );
 
     dispatch(pushContentfulData({ featuredItems: featuredArray }));
   };

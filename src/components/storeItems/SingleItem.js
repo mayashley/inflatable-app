@@ -10,7 +10,7 @@ class SingleItem extends Component {
     super(props);
     this.state = {
       imageLoaded: false,
-      imgURL: null
+      imgURL: null,
     };
   }
 
@@ -23,7 +23,7 @@ class SingleItem extends Component {
     console.log(item);
     const imgURL = await getImage(item.images[0].sys.id);
     this.setState({
-      imgURL
+      imgURL,
     });
   };
 
@@ -32,8 +32,11 @@ class SingleItem extends Component {
   };
   render() {
     const { imgURL, imageLoaded } = this.state;
-    const { item, dispatch } = this.props;
-    const { name, price, slug, type } = item;
+    const { item, dispatch, location } = this.props;
+    const { name, price, slug, type, featured } = item;
+    const path = featured
+      ? `featured/${type}/${slug}`
+      : `${location.pathname}/${type}/${slug}`;
     return (
       <article className={styles.singleItems}>
         <div className={styles.imgContainer}>
@@ -42,7 +45,7 @@ class SingleItem extends Component {
               <p>Loading...</p>
             </div>
           )}
-          <Link to={`${this.props.location.pathname}/${type}/${slug}`}>
+          <Link to={path}>
             <img
               className={styles.img}
               style={imageLoaded ? {} : { display: "none" }}
@@ -82,6 +85,8 @@ class SingleItem extends Component {
   }
 }
 
-export default withRouter(connect(state => ({
-  listState: state
-}))(SingleItem));
+export default withRouter(
+  connect((state) => ({
+    listState: state,
+  }))(SingleItem)
+);
