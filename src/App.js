@@ -12,7 +12,7 @@ import SelfPickUp from './pages/SelfPickUp'
 
 
 import "./App.css";
-import { getContent } from "./redux/managers/contentfulService";
+import { getContent, getFeaturedContent } from "./redux/managers/contentfulService";
 import { pushContentfulData, contentfulError } from "./redux/actions";
 import ProductTemplate from "./templates/ProductTemplate";
 
@@ -36,7 +36,7 @@ class App extends Component {
 
     try {
       const data = await getContent();
-
+      dispatch(getFeaturedContent(data.items));
       data.items.forEach(item => {
         let dataObject = {
           ...item.fields,

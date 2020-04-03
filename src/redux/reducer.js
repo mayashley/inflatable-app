@@ -13,7 +13,8 @@ const initialState = {
     obstacles: [],
     self: [],
     slides: [],
-    water: []
+    water: [],
+    featuredItems: [],
   },
   list: [],
   isLoading: true,
