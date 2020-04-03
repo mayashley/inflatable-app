@@ -55,10 +55,6 @@ class SingleItem extends Component {
             />
           </Link>
 
-          {/* <Image fluid={mainImage} className={styles.img} alt="single tour" />
-      <AniLink fade className={styles.link} to={`/BounceCombo/${slug}`}>
-        details
-      </AniLink> */}
         </div>
         <div className={styles.footer}>
           <h3>{name}</h3>

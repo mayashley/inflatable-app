@@ -72,7 +72,7 @@ class App extends Component {
         {/* <Navbar /> */}
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/featured" exact component={HomePage} />
+          {/* <Route path="/featured" exact component={HomePage} /> */}
           <Route path="/featured/:cat/:id" component={ProductTemplate} />
           <Route path="/BounceCombo" exact component={BounceCombo} />
           <Route path="/BounceCombo/:cat/:id" component={ProductTemplate} />

@@ -1,32 +1,12 @@
-import React from "react"
-import ItemsList from "./ItemsList"
-// import { useStaticQuery, graphql } from "gatsby"
+// import React from "react"
+// import ItemsList from "./ItemsList"
 
-// const getAllCombos = graphql`
-//   query {
-//     combos: allContentfulCombos {
-//       edges {
-//         node {
-//           name
-//           price
-//           slug
-//           contentful_id
-//           images {
-//             fluid {
-//               ...GatsbyContentfulFluid
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
 
-const AllItems = () => {
-  // const { combos } = useStaticQuery(getAllCombos)
+// const AllItems = () => {
+ 
 
-  return <ItemsList 
-  // combos={combos} 
-  />
-}
-export default AllItems
+//   return <ItemsList 
+ 
+//   />
+// }
+// export default AllItems
