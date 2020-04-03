@@ -30,10 +30,6 @@ class ProductTemplate extends Component {
         });
       })
       .catch(err => console.log(err));
-    // await getImage(item.images[0].sys.id);
-    // this.setState({
-    //   imgURL
-    // });
   };
 
   // To get name of array to look in use:

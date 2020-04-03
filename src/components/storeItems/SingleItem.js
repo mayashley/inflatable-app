@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import styles from "../../css/singleItems.module.css";
 import { getImage } from "../../redux/managers/contentfulService";
 import { addItem, removeItem } from "../../redux/actions";
-import { Link, useLocation, withRouter  } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class SingleItem extends Component {
   constructor(props) {
@@ -12,8 +12,6 @@ class SingleItem extends Component {
       imageLoaded: false,
       imgURL: null
     };
-    // this.location = useLocation();
-
   }
 
   componentDidMount() {
@@ -36,7 +34,6 @@ class SingleItem extends Component {
     const { imgURL, imageLoaded } = this.state;
     const { item, dispatch } = this.props;
     const { name, price, slug, type } = item;
-    // console.log(this.location);
     return (
       <article className={styles.singleItems}>
         <div className={styles.imgContainer}>
