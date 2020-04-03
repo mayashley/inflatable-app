@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from '../css/banner.module.css'
 
- const Banner = ({title, info, children}) => {
+ const Banner = ({title, children}) => {
     return (
         <div className={styles.banner}>
+             <div className={styles.bannerHero}>
            <h1>{title}</h1>
-           <p>{info}</p>
+           </div>
            {children}
         </div>
     )

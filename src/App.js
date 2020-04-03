@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BounceCombo from "./pages/BounceCombo";
 import BounceHouses from "./pages/BounceHouses";
@@ -63,7 +63,7 @@ class App extends Component {
 
     return (
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/BounceCombo" component={BounceCombo} />

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
+/* @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
   --primaryColor: rgb(83, 83, 83);
@@ -10,11 +10,11 @@
   --grey: grey;
   --mainTransition: all 0.3s linear;
   /* --mainSpacing: 4px; */
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-}
+  /* --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5); */
+/* }  */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,11 +24,11 @@ body {
   font-family: "Lato", sans-serif;
   color: var(--mainBlack);
   /* color: white; */
-  background: var(--mainGrey);
+  /* background: var(--mainGrey);
   line-height: 1.4;
-  font-size: 1rem;
-}
-h1,
+  font-size: 1rem; */
+/* } * */
+/* h1,
 h2,
 h3,
 h4,
@@ -43,22 +43,20 @@ a {
 }
 p {
   margin-bottom: 1.25rem;
-}
-.defaultHero {
+} */
+/* .defaultHero {
   min-height: calc(100vh - 62px);
   background: 
     url(".././images/bounceCastle2.jpg") center/cover no-repeat;
-    /* linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)), */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 3rem 0; */
-}
-.btn-white,
+} */
+/* .btn-white,
 .btn-primary {
   text-transform: uppercase;
   text-decoration: none;
-  /* letter-spacing: var(--mainSpacing); */
+ 
   color: var(--mainWhite);
   border: 2px solid var(--mainWhite);
   padding: 0.9rem 1.6rem;
@@ -86,4 +84,4 @@ main {
 }
 .rich {
   background: var(--primaryColor);
-}
+} */

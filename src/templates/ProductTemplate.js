@@ -39,7 +39,7 @@ class ProductTemplate extends Component {
   // props.match.params.id
   render() {
     const { item, imgArray } = this.state;
-    // console.log(item);
+    console.log(item);
     return (
       <div>
         {imgArray.map(img => {

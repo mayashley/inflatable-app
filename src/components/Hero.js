@@ -1,27 +1,21 @@
 import React from 'react'
-// import {useStaticQuery, graphql} from 'gatsby'
-// import Img from 'gatsby-image'
+import styles from "../css/hero.module.css"
+import Banner from '../constants/Banner'
 
 
-// const getHomeImg = graphql`
-// query homeImg{
-//     homeImg:file(relativePath:{eq:"bounceHouse2.png"}){
-//       childImageSharp{
-//         fluid{
-//           src
-//         }
-//       }
-//     }
-//   }
-// `
+
+const Img = require('../images/bounceCastle2.jpg');
 
 
- const Hero = ({children}) => {
-    // const{homeImg} = useStaticQuery(getHomeImg);
+ const Hero = () => {
+   
     return (
-        <header className='defaultHero'>
-             {/* <Img fluid={homeImg.childImageSharp.fluid} alt="kids bouncing"/> */}
-            {children}
+        <header className={styles.heroContainer} >
+           
+            <Banner title="Southern ohio inflatables">
+        
+             <img className={styles.defaultHero} src={Img} alt="kids bouncing"/>
+             </Banner>
         </header>
     )
 }

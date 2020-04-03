@@ -1,0 +1,12 @@
+
+.defaultHero {
+  /* border: 1px solid red; */
+     background-position: center;
+     background-size: cover;
+     background-repeat: repeat no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    overflow: hidden;
+  }
+ 
