@@ -1,41 +1,17 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import {useStaticQuery, graphql} from 'gatsby'
+import { connect } from "react-redux";
 import Title from '../constants/Title'
 import styles from '../css/items.module.css'
 import ItemsList from '../components/storeItems/ItemsList'
 
-
-const getAllInteractives = graphql`
-query{
-    combos:allContentfulInteractives{
-      edges{
-        node{
-          name
-          price
-          slug
-          contentful_id
-          images{
-            fluid{
-                ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-
- const Interactives = () => {
-    const { combos } = useStaticQuery(getAllInteractives);
+ const Interactives = ({appState}) => {
     return (
-        <Layout>
             <div className={styles.itemsWrapper}>
             <Title  title="Inflatable Interactives"/>
-           <ItemsList combos={combos}/>
-           </div>
-        </Layout>
-    )
-}
-export default Interactives
+            <ItemsList itemsArray={appState.contentfulData.interactives}/>
+    </div>
+  );
+};
+export default connect(state =>({
+  appState: state
+}))(Interactives);

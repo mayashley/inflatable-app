@@ -1,5 +1,4 @@
 import React from "react";
-// import AllItems from "../components/storeItems/AllItems";
 import Title from "../constants/Title";
 import styles from "../css/items.module.css";
 import { connect } from "react-redux";

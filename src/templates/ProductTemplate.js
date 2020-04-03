@@ -13,6 +13,7 @@ class ProductTemplate extends Component {
     };
   }
   componentDidMount() {
+    // console.log('wtf');
     this.fetchImages();
   }
 

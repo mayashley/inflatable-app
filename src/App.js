@@ -6,6 +6,10 @@ import Footer from "./components/Footer";
 import BounceCombo from "./pages/BounceCombo";
 import BounceHouses from "./pages/BounceHouses";
 import HomePage from "./pages/HomePage";
+import Interactives from './pages/Interactives';
+import ObstacleCourse from './pages/ObstacleCourse';
+import SelfPickUp from './pages/SelfPickUp'
+
 
 import "./App.css";
 import { getContent } from "./redux/managers/contentfulService";
@@ -66,9 +70,16 @@ class App extends Component {
         {/* <Navbar /> */}
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/BounceCombo" component={BounceCombo} />
+          <Route path="/BounceCombo" exact component={BounceCombo} />
+          <Route path="/BounceCombo/:cat/:id" component={ProductTemplate} />
           <Route path="/BounceHouses" exact component={BounceHouses} />
           <Route path="/BounceHouses/:cat/:id" component={ProductTemplate} />
+          <Route path="/Interactives" exact component={Interactives} />
+          <Route path="/Interactives/:cat/:id" component={ProductTemplate} />
+          <Route path="/ObstacleCourse" exact component={ObstacleCourse} />
+          <Route path="/ObstacleCourse/:cat/:id" component={ProductTemplate} />
+          <Route path="/SelfPickUp" exact component={SelfPickUp} />
+          <Route path="/SelfPickUp/:cat/:id" component={ProductTemplate} />
         </Switch>
         <Footer />
       </Router>
