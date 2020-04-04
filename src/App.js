@@ -9,6 +9,8 @@ import HomePage from "./pages/HomePage";
 import Interactives from "./pages/Interactives";
 import ObstacleCourse from "./pages/ObstacleCourse";
 import SelfPickUp from "./pages/SelfPickUp";
+import Slides from './pages/Slides';
+import WaterFriendly from './pages/WaterFriendly';
 
 import "./App.css";
 import {
@@ -84,6 +86,10 @@ class App extends Component {
           <Route path="/ObstacleCourse/:cat/:id" component={ProductTemplate} />
           <Route path="/SelfPickUp" exact component={SelfPickUp} />
           <Route path="/SelfPickUp/:cat/:id" component={ProductTemplate} />
+          <Route path="/Slides" exact component={Slides} />
+          <Route path="/Slides/:cat/:id" component={ProductTemplate} />
+          <Route path="/WaterFriendly" exact component={WaterFriendly} />
+          <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
         </Switch>
         <Footer />
       </Router>

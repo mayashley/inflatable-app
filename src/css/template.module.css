@@ -1,0 +1,25 @@
+.templateWrapper{
+    border: 1px solid red;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.templateWrapper img{
+    border: 1px solid blue;
+    display:flex;
+    width: 300px;
+    height: 300px;
+    margin: 1rem;
+   
+}
+
+
+@media screen and (min-width: 1110px) {
+   .templateWrapper{
+       justify-content: flex-start;
+   }
+  }
+  

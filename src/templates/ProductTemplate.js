@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getImage } from "../redux/managers/contentfulService";
+import styles from '../css/template.module.css'
 
 class ProductTemplate extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class ProductTemplate extends Component {
     const { item, imgArray } = this.state;
     console.log(item);
     return (
-      <div>
+      <div className={styles.templateWrapper}>
         {imgArray.map(img => {
           return <img src={img} alt="" />;
         })}
