@@ -62,7 +62,6 @@ class App extends Component {
 
     console.log(appState.contentfulData);
     if (appState.isLoading) {
-      console.log("LOADING");
       return (
         <div>
           <p>Loading...</p>
