@@ -4,14 +4,12 @@
   min-width: 300px;
   width: 300px;
   margin: 1rem;
-
 }
 .singleItems:hover {
   box-shadow: var(--darkShadow);
 }
 .img {
   position: relative;
-
   height: 300px;
   width: 100%;
 }
