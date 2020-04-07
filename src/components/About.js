@@ -21,7 +21,7 @@ const About = () => {
               Inflatable's we pride ourselves in our product and our customer
               service. Your party or event is as important to us as it is you,
               which is why we strive to provide you with the most memorable
-              experience possible
+              experience possible.
             </p>
           </div>
         </article>

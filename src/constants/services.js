@@ -19,13 +19,13 @@ export default [
   },
   {
     icon: <GiFamilyHouse />,
-    title: "Family Owned and Opperated",
+    title: "Family Owned and Operated",
     text: "A locally family owned and operated business since 2017.",
   },
   {
     icon: <GiLaserSparks />,
-    title: "Clean and Safe Equiptment",
-    text: "All of our equipment is sanitized and inspected before each use",
+    title: "Clean and Safe Equipment",
+    text: "All of our equipment is sanitized and inspected before each use.",
   },
   {
     icon: <GiSun />,

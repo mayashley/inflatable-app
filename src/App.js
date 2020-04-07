@@ -11,6 +11,7 @@ import ObstacleCourse from "./pages/ObstacleCourse";
 import SelfPickUp from "./pages/SelfPickUp";
 import Slides from './pages/Slides';
 import WaterFriendly from './pages/WaterFriendly';
+import Faq from './pages/Faq';
 
 import "./App.css";
 import {
@@ -90,6 +91,7 @@ class App extends Component {
           <Route path="/Slides/:cat/:id" component={ProductTemplate} />
           <Route path="/WaterFriendly" exact component={WaterFriendly} />
           <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
+          <Route path="/Faq" exact component={Faq} />
         </Switch>
         <Footer />
       </Router>

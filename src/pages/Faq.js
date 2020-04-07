@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "../components/Layout"
+
 import Title from "../constants/Title"
 import Questions from '../constants/Questions'
 import styles from '../css/faq.module.css'
 
 const Faq = () => {
   return (
-    <Layout>
+    <div>
       <div className={styles.faqTitleWrapper}>
        <Title title="Frequently Asked Questions" />
        </div>
@@ -24,7 +24,7 @@ const Faq = () => {
           </div>
         </div>
         </div>
-    </Layout>
+        </div>
   )
 }
 export default Faq
