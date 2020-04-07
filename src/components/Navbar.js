@@ -52,7 +52,11 @@ class Navbar extends Component {
                   onClick={() => this.toggleNavItem(item.stateValue)}
                 >
                   {item.route ? (
-                    <NavLink key={index} to={item.route}>
+                    <NavLink
+                      key={index}
+                      to={item.route}
+                      onClick={this.toggleNav}
+                    >
                       <div className={styles.itemLink}>
                         <span className={styles.itemText}>{item.title}</span>
                       </div>
@@ -67,7 +71,11 @@ class Navbar extends Component {
                     item.subcats.map((subcat, index) => {
                       return (
                         <div>
-                          <NavLink key={index} to={subcat.subroute}>
+                          <NavLink
+                            key={index}
+                            to={subcat.subroute}
+                            onClick={this.toggleNav}
+                          >
                             <div className={styles.subLink}>
                               <span className={styles.itemText}>
                                 {subcat.subtitle}
