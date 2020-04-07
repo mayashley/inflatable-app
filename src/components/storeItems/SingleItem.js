@@ -20,7 +20,7 @@ class SingleItem extends Component {
 
   fetchImage = async () => {
     const { item } = this.props;
-    console.log(item);
+    // console.log(item);
     const imgURL = await getImage(item.images[0].sys.id);
     this.setState({
       imgURL,
