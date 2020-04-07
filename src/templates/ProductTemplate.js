@@ -40,12 +40,16 @@ class ProductTemplate extends Component {
   // To get slug of item use:
   // props.match.params.id
   render() {
-    const { imgArray , item, description, price} = this.state;
+    const { imgArray , item, description, price, dim, out, occ, weight} = this.state;
     console.log(item);
     return (
       <div className={styles.templateWrapper}>
         <div className={styles.infoWrapper}>
        <h1>{item.name}</h1>
+       <p>{item.dim}</p>
+       <p>{item.weight}</p>
+       <p>{item.occ}</p>
+       <p>{item.out}</p>
        <p>{item.description}</p>
        <h3>${item.price}</h3>
        </div>
