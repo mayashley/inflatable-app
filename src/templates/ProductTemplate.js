@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getImage } from "../redux/managers/contentfulService";
-import styles from '../css/template.module.css'
+import styles from "../css/template.module.css";
 
 class ProductTemplate extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: this.props.appState.contentfulData[props.match.params.cat].filter(
-        item => item.slug === props.match.params.id
+        (item) => item.slug === props.match.params.id
       )[0],
-      imgArray: []
+      imgArray: [],
     };
   }
   componentDidMount() {
@@ -21,17 +21,17 @@ class ProductTemplate extends Component {
   fetchImages = async () => {
     const { item } = this.state;
     let imgPromises = [];
-    item.images.forEach(image => {
+    item.images.forEach((image) => {
       return imgPromises.push(getImage(image.sys.id));
     });
 
     Promise.all(imgPromises)
-      .then(res => {
+      .then((res) => {
         this.setState({
-          imgArray: res
+          imgArray: res,
         });
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   // To get name of array to look in use:
@@ -40,31 +40,40 @@ class ProductTemplate extends Component {
   // To get slug of item use:
   // props.match.params.id
   render() {
-    const { imgArray , item, description, price, dim, out, occ, weight} = this.state;
+    const {
+      imgArray,
+      item,
+      description,
+      price,
+      dim,
+      out,
+      occ,
+      weight,
+    } = this.state;
     console.log(item);
     return (
       <div className={styles.templateWrapper}>
         <div className={styles.infoWrapper}>
-       <h1>{item.name}</h1>
-       <p>{item.dim}</p>
-       <p>{item.weight}</p>
-       <p>{item.occ}</p>
-       <p>{item.out}</p>
-       <p>{item.description}</p>
-       <h3>${item.price}</h3>
-       </div>
-       <div className={styles.mainImgWrap}>
-       <div className={styles.imgWrapper}>
-        {imgArray.map((img, index) => {
-          return <img key={index} src={img} alt="" />;
-        })}
+          <h1>{item.name}</h1>
+          <p>{item.dim}</p>
+          <p>{item.weight}</p>
+          <p>{item.occ}</p>
+          <p>{item.out}</p>
+          <p>{item.description}</p>
+          <h3>${item.price}</h3>
         </div>
+        <div className={styles.mainImgWrap}>
+          <div className={styles.imgWrapper}>
+            {imgArray.map((img, index) => {
+              return <img key={index} src={img} alt="" />;
+            })}
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default connect(state => ({
-  appState: state
+export default connect((state) => ({
+  appState: state,
 }))(ProductTemplate);
