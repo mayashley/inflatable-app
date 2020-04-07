@@ -1,4 +1,4 @@
-import { pushContentfulData } from "../actions";
+import { pushContentfulData, pushFeaturedData } from "../actions";
 
 export function getContent() {
   const {
@@ -26,8 +26,7 @@ export function getFeaturedContent(allContent) {
       .forEach((fi) =>
         featuredArray.push({ ...fi.fields, type: fi.sys.contentType.sys.id })
       );
-
-    dispatch(pushContentfulData({ featuredItems: featuredArray }));
+    dispatch(pushFeaturedData({ featuredItems: featuredArray }));
   };
 }
 

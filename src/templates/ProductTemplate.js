@@ -6,6 +6,7 @@ import styles from '../css/template.module.css'
 class ProductTemplate extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       item: this.props.appState.contentfulData[props.match.params.cat].filter(
         item => item.slug === props.match.params.id
@@ -20,6 +21,7 @@ class ProductTemplate extends Component {
 
   fetchImages = async () => {
     const { item } = this.state;
+    console.log(item);
     let imgPromises = [];
     item.images.forEach(image => {
       return imgPromises.push(getImage(image.sys.id));
@@ -44,8 +46,8 @@ class ProductTemplate extends Component {
     console.log(item);
     return (
       <div className={styles.templateWrapper}>
-        {imgArray.map(img => {
-          return <img src={img} alt="" />;
+        {imgArray.map((img, index) => {
+          return <img key={index} src={img} alt="" />;
         })}
       </div>
     );
