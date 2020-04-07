@@ -1,7 +1,7 @@
-import React from "react"
-import styles from "../css/About.module.css"
-import Title from "../constants/Title"
-import SlideShow from "../components/SlideShow"
+import React from "react";
+import styles from "../css/About.module.css";
+import Title from "../constants/Title";
+import SlideShow from "../components/SlideShow";
 
 const About = () => {
   return (
@@ -16,10 +16,12 @@ const About = () => {
           </div>
           <div className={styles.paragraphContainer}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              cursus metus eu purus tempus, id lacinia turpis ornare. Mauris
-              lorem eros, scelerisque id consequat ut, tincidunt a orci. Nunc mi
-              nisl, tincidunt in accumsan vitae, euismod nec dolor.
+              We are a family owned and operated business that provides party
+              rental services to the Ohio Valley Area. At Southern Ohio
+              Inflatable's we pride ourselves in our product and our customer
+              service. Your party or event is as important to us as it is you,
+              which is why we strive to provide you with the most memorable
+              experience possible
             </p>
           </div>
         </article>
@@ -30,6 +32,6 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
-export default About
+  );
+};
+export default About;
