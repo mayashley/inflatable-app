@@ -12,7 +12,7 @@ import SelfPickUp from "./pages/SelfPickUp";
 import Slides from './pages/Slides';
 import WaterFriendly from './pages/WaterFriendly';
 import Faq from './pages/Faq';
-import Games from './pages/Games';
+import DunkBooth from './pages/DunkBooth';
 
 import "./App.css";
 import {
@@ -97,8 +97,8 @@ class App extends Component {
             <Route path="/Slides/:cat/:id" component={ProductTemplate} />
             <Route path="/WaterFriendly" exact component={WaterFriendly} />
             <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
-            <Route path="/Games" exact component={Games} />
-          <Route path="/Games/:cat/:id" component={ProductTemplate} />
+            <Route path="/DunkBooth" exact component={DunkBooth} />
+          <Route path="/DunkBooth/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
           </Switch>
         </div>
