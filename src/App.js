@@ -12,6 +12,7 @@ import SelfPickUp from "./pages/SelfPickUp";
 import Slides from './pages/Slides';
 import WaterFriendly from './pages/WaterFriendly';
 import Faq from './pages/Faq';
+import Games from './pages/Games';
 
 import "./App.css";
 import {
@@ -75,7 +76,6 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          {/* <Route path="/featured" exact component={HomePage} /> */}
           <Route path="/featured/:cat/:id" component={ProductTemplate} />
           <Route path="/BounceCombo" exact component={BounceCombo} />
           <Route path="/BounceCombo/:cat/:id" component={ProductTemplate} />
@@ -91,6 +91,8 @@ class App extends Component {
           <Route path="/Slides/:cat/:id" component={ProductTemplate} />
           <Route path="/WaterFriendly" exact component={WaterFriendly} />
           <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
+          <Route path="/Games" exact component={Games} />
+          <Route path="/Games/:cat/:id" component={ProductTemplate} />
           <Route path="/Faq" exact component={Faq} />
         </Switch>
         <Footer />
