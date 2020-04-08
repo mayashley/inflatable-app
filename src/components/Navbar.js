@@ -77,7 +77,6 @@ class Navbar extends Component {
 
   render() {
     const { showNav } = this.state;
-    console.log(this.state);
     return (
       <div className={styles.mainContainer}>
         <div className={styles.navIcon}>
@@ -112,7 +111,6 @@ class Navbar extends Component {
                     <div className={styles.subContainer}>
                       {item.subcats.map((subcat, index) => {
                         return (
-                          // <div>
                           <NavLink
                             key={index}
                             to={subcat.subroute}
@@ -123,7 +121,6 @@ class Navbar extends Component {
                               {subcat.subtitle}
                             </span>
                           </NavLink>
-                          // </div>
                         );
                       })}
                     </div>
