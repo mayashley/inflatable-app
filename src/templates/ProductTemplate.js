@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getImage } from "../redux/managers/contentfulService";
 import styles from "../css/template.module.css";
 import AddToListButton from "../components/AddToListButton";
+import { addItem } from "../redux/actions";
 
 class ProductTemplate extends Component {
   constructor(props) {
@@ -37,6 +38,13 @@ class ProductTemplate extends Component {
       .catch((err) => console.log(err));
   };
 
+  addToList = () => {
+    const { item } = this.state;
+    const { dispatch } = this.props;
+
+    dispatch(addItem(item));
+  };
+
   // To get name of array to look in use:
   // props.match.params.cat
 
@@ -44,8 +52,8 @@ class ProductTemplate extends Component {
   // props.match.params.id
   render() {
     const { imgArray, item, selectedImg } = this.state;
+    const { list } = this.props.appState;
 
-    console.log(item);
     return (
       <div className={styles.mainContainer}>
         <div className={styles.titleContainer}>
@@ -83,28 +91,14 @@ class ProductTemplate extends Component {
               <h4>{item.description}</h4>
               <div className={styles.row}>
                 <h4>${item.price}</h4>
-                <AddToListButton />
+                <AddToListButton
+                  added={list.filter((li) => li.slug === item.slug).length > 0}
+                  handleOnClick={this.addToList}
+                />
               </div>
             </div>
           </div>
         </div>
-
-        {/* <div className={styles.infoWrapper}>
-          <h1>{item.name}</h1>
-          <p>{item.dim}</p>
-          <p>{item.weight}</p>
-          <p>{item.occ}</p>
-          <p>{item.out}</p>
-          <p>{item.description}</p>
-          <h3>${item.price}</h3>
-        </div> */}
-        {/* <div className={styles.mainImgWrap}>
-          <div className={styles.imgWrapper}>
-            {imgArray.map((img, index) => {
-              return <img key={index} src={img} alt="" />;
-            })}
-          </div>
-        </div> */}
       </div>
     );
   }

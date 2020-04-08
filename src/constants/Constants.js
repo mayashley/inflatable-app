@@ -36,18 +36,13 @@ export const navbarData = [
     ],
   },
   {
-    title: "FAQ's",
-    route: "/Faq",
-    subcats: [],
-  },
-  {
     title: "Contact",
-    route: "/Contact",
-    subcats: [],
-  },
-  {
-    title: "Pay Deposit",
-    route: "/Deposit",
-    subcats: [],
+    route: null,
+    stateValue: "contactOpen",
+    subcats: [
+      { subtitle: "FAQ's", subroute: "/Faq" },
+      { subtitle: "Contact Us", subroute: "/Contact" },
+      { subtitle: "Pay Deposit", subroute: "/Deposit" },
+    ],
   },
 ];

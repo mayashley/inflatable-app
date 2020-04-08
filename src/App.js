@@ -9,10 +9,10 @@ import HomePage from "./pages/HomePage";
 import Interactives from "./pages/Interactives";
 import ObstacleCourse from "./pages/ObstacleCourse";
 import SelfPickUp from "./pages/SelfPickUp";
-import Slides from './pages/Slides';
-import WaterFriendly from './pages/WaterFriendly';
-import Faq from './pages/Faq';
-import DunkBooth from './pages/DunkBooth';
+import Slides from "./pages/Slides";
+import WaterFriendly from "./pages/WaterFriendly";
+import Faq from "./pages/Faq";
+import DunkBooth from "./pages/DunkBooth";
 
 import "./App.css";
 import {
@@ -38,11 +38,12 @@ class App extends Component {
       slides: [],
       water: [],
       games: [],
+      concessions: [],
     };
 
     try {
       const data = await getContent();
-
+      console.log(data);
       dispatch(getFeaturedContent(data.items));
       data.items.forEach((item) => {
         let dataObject = {
@@ -98,7 +99,7 @@ class App extends Component {
             <Route path="/WaterFriendly" exact component={WaterFriendly} />
             <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
             <Route path="/DunkBooth" exact component={DunkBooth} />
-          <Route path="/DunkBooth/:cat/:id" component={ProductTemplate} />
+            <Route path="/DunkBooth/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
           </Switch>
         </div>

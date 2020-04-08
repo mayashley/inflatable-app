@@ -15,6 +15,7 @@ class Navbar extends Component {
       infOpen: false,
       gamesOpen: false,
       partyOpen: false,
+      contactOpen: false,
       width: 0,
       height: 0,
     };
@@ -35,6 +36,7 @@ class Navbar extends Component {
       infOpen: false,
       gamesOpen: false,
       partyOpen: false,
+      contactOpen: false,
       showNav: false,
     };
     if (window.innerWidth >= 768) {
@@ -42,6 +44,7 @@ class Navbar extends Component {
         infOpen: true,
         gamesOpen: true,
         partyOpen: true,
+        contactOpen: true,
         showNav: true,
       };
     }
@@ -61,6 +64,7 @@ class Navbar extends Component {
         infOpen: false,
         gamesOpen: false,
         partyOpen: false,
+        contactOpen: false,
       });
   };
 
