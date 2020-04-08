@@ -90,7 +90,7 @@ class ProductTemplate extends Component {
             <div className={styles.descContainer}>
               <h4>{item.description}</h4>
               <div className={styles.row}>
-                <h4>${item.price}</h4>
+                <h4 className={styles.price}>${item.price}</h4>
                 <AddToListButton
                   added={list.filter((li) => li.slug === item.slug).length > 0}
                   handleOnClick={this.addToList}

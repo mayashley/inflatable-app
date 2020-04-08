@@ -6,6 +6,7 @@ import { HamburgerCollapse } from "react-animated-burgers";
 // import SocialIcons from "../constants/social-icons"
 import { navbarData } from "../constants/Constants";
 import styles from "../css/navbar.module.css";
+import ListButton from "./ListButton";
 
 class Navbar extends Component {
   constructor(props) {
@@ -80,16 +81,20 @@ class Navbar extends Component {
   };
 
   render() {
+    const { list } = this.props.listState;
     const { showNav } = this.state;
     return (
       <div className={styles.mainContainer}>
         <div className={styles.navIcon}>
-          <HamburgerCollapse
-            className={styles.hamburgerIcon}
-            isActive={showNav}
-            toggleButton={this.toggleNav}
-            barColor="rgb(255, 123, 0)"
-          />
+          <ListButton itemCount={list.length} />
+          <div className={styles.hamburgerContainer}>
+            <HamburgerCollapse
+              className={styles.hamburgerIcon}
+              isActive={showNav}
+              toggleButton={this.toggleNav}
+              barColor="rgb(255, 123, 0)"
+            />
+          </div>
         </div>
         {showNav && (
           <div className={styles.navItems}>
@@ -132,6 +137,9 @@ class Navbar extends Component {
                 </div>
               );
             })}
+            <div className={styles.wideList}>
+              <ListButton itemCount={list.length} />
+            </div>
           </div>
         )}
       </div>

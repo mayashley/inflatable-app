@@ -36,6 +36,10 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+.price {
+  margin-bottom: 0;
+  align-self: center;
+}
 .imgWrapper {
   display: flex;
   flex-direction: row;

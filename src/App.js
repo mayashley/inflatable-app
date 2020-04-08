@@ -14,6 +14,7 @@ import WaterFriendly from "./pages/WaterFriendly";
 import Faq from "./pages/Faq";
 import DunkBooth from "./pages/DunkBooth";
 import Concessions from './pages/Concessions'
+import List from "./pages/List";
 
 import "./App.css";
 import {
@@ -104,6 +105,7 @@ class App extends Component {
             <Route path="/Concessions" exact component={Concessions} />
             <Route path="/Concessions/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
+            <Route path="/list" exact component={List} />
           </Switch>
         </div>
 
