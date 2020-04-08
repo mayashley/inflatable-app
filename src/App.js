@@ -28,7 +28,6 @@ class App extends Component {
 
   fetchContent = async () => {
     const { dispatch } = this.props;
-
     let categoryObject = {
       bounce: [],
       combos: [],
@@ -37,10 +36,12 @@ class App extends Component {
       self: [],
       slides: [],
       water: [],
+      games: [],
     };
 
     try {
       const data = await getContent();
+
       dispatch(getFeaturedContent(data.items));
       data.items.forEach((item) => {
         let dataObject = {
@@ -73,26 +74,32 @@ class App extends Component {
     return (
       <Router>
         <Navbar />
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          {/* <Route path="/featured" exact component={HomePage} /> */}
-          <Route path="/featured/:cat/:id" component={ProductTemplate} />
-          <Route path="/BounceCombo" exact component={BounceCombo} />
-          <Route path="/BounceCombo/:cat/:id" component={ProductTemplate} />
-          <Route path="/BounceHouses" exact component={BounceHouses} />
-          <Route path="/BounceHouses/:cat/:id" component={ProductTemplate} />
-          <Route path="/Interactives" exact component={Interactives} />
-          <Route path="/Interactives/:cat/:id" component={ProductTemplate} />
-          <Route path="/ObstacleCourse" exact component={ObstacleCourse} />
-          <Route path="/ObstacleCourse/:cat/:id" component={ProductTemplate} />
-          <Route path="/SelfPickUp" exact component={SelfPickUp} />
-          <Route path="/SelfPickUp/:cat/:id" component={ProductTemplate} />
-          <Route path="/Slides" exact component={Slides} />
-          <Route path="/Slides/:cat/:id" component={ProductTemplate} />
-          <Route path="/WaterFriendly" exact component={WaterFriendly} />
-          <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
-          <Route path="/Faq" exact component={Faq} />
-        </Switch>
+        <div className="App">
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            {/* <Route path="/featured" exact component={HomePage} /> */}
+            <Route path="/featured/:cat/:id" component={ProductTemplate} />
+            <Route path="/BounceCombo" exact component={BounceCombo} />
+            <Route path="/BounceCombo/:cat/:id" component={ProductTemplate} />
+            <Route path="/BounceHouses" exact component={BounceHouses} />
+            <Route path="/BounceHouses/:cat/:id" component={ProductTemplate} />
+            <Route path="/Interactives" exact component={Interactives} />
+            <Route path="/Interactives/:cat/:id" component={ProductTemplate} />
+            <Route path="/ObstacleCourse" exact component={ObstacleCourse} />
+            <Route
+              path="/ObstacleCourse/:cat/:id"
+              component={ProductTemplate}
+            />
+            <Route path="/SelfPickUp" exact component={SelfPickUp} />
+            <Route path="/SelfPickUp/:cat/:id" component={ProductTemplate} />
+            <Route path="/Slides" exact component={Slides} />
+            <Route path="/Slides/:cat/:id" component={ProductTemplate} />
+            <Route path="/WaterFriendly" exact component={WaterFriendly} />
+            <Route path="/WaterFriendly/:cat/:id" component={ProductTemplate} />
+            <Route path="/Faq" exact component={Faq} />
+          </Switch>
+        </div>
+
         <Footer />
       </Router>
     );

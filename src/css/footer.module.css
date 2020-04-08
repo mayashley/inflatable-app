@@ -1,10 +1,11 @@
 .footer {
-    margin-top: auto;
+    height: var(--footerHeight);
     background-color: var(--mainWhite);
-    padding: 2rem;
     text-align: center;
     color: rgb(83, 83, 83);
-    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .socialIcons a {
     display: inline-block;
@@ -21,7 +22,7 @@
   }
   .icons a {
     display: inline-block;
-    margin: 1rem;
+    margin: 0 1rem;
     font-size: 1.3rem;
     color: rgb(83, 83, 83);
     transition: var(--mainTransition);
