@@ -1,11 +1,17 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import ItemsList from "../components/storeItems/ItemsList";
+import styles from "../css/items.module.css";
+import { connect } from "react-redux";
+import Title from "../constants/Title";
 
- const TablesAndChairs = () => {
-    return (
-      <Layout>
-          tables and chairs
-      </Layout>
-    )
-}
-export default TablesAndChairs
+ const TablesAndChairs = ({appState}) => {
+  return(
+    <div className={styles.itemsWrapper}>
+      <Title title="Tables and Chairs" />
+      <ItemsList itemsArray={appState.contentfulData.tablesandchairs} />
+    </div>
+  );
+};
+export default connect(state => ({
+    appState: state
+  }))(TablesAndChairs);

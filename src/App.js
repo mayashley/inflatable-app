@@ -14,6 +14,7 @@ import WaterFriendly from "./pages/WaterFriendly";
 import Faq from "./pages/Faq";
 import DunkBooth from "./pages/DunkBooth";
 import Concessions from './pages/Concessions'
+import TablesAndChairs from './pages/TablesAndChairs'
 import List from "./pages/List";
 import Contact from './pages/Contact'
 
@@ -42,6 +43,7 @@ class App extends Component {
       water: [],
       games: [],
       concessions: [],
+      tablesandchairs:[],
     };
 
     try {
@@ -105,6 +107,8 @@ class App extends Component {
             <Route path="/DunkBooth/:cat/:id" component={ProductTemplate} />
             <Route path="/Concessions" exact component={Concessions} />
             <Route path="/Concessions/:cat/:id" component={ProductTemplate} />
+            <Route path="/TablesAndChairs" exact component={TablesAndChairs} />
+            <Route path="/TablesAndChairs/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
             <Route path="/list" exact component={List} />
             <Route path="/Contact" exact component={Contact}/>
