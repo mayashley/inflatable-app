@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import styles from "../../css/singleItems.module.css";
 import { getImage } from "../../redux/managers/contentfulService";
-import { addItem, removeItem } from "../../redux/actions";
 import { Link, withRouter } from "react-router-dom";
 
 class SingleItem extends Component {
@@ -57,23 +56,18 @@ class SingleItem extends Component {
 
         </div>
         <div className={styles.footer}>
+          <Link to={path} alt="">
           <h3>{name}</h3>
+          </Link>
           <div className={styles.details}>
             <h5>price: ${price}</h5>
-            <button
-              onClick={() => {
-                dispatch(addItem(item));
-              }}
-            >
-              button
-            </button>
-            <button
+            {/* <button
               onClick={() => {
                 dispatch(removeItem(item));
               }}
             >
-              button
-            </button>
+             Details
+            </button> */}
           </div>
         </div>
       </article>

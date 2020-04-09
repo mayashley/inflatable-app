@@ -38,9 +38,9 @@
   align-items: center;
   height: var(--navHeight);
 }
-.itemLink span {
+/* .itemLink span {
   text-decoration: underline;
-}
+} */
 .subContainer {
   display: flex;
   flex-direction: column;

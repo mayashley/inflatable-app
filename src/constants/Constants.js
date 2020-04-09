@@ -36,7 +36,7 @@ export const navbarData = [
     ],
   },
   {
-    title: "Contact",
+    title: "More",
     route: null,
     stateValue: "contactOpen",
     subcats: [

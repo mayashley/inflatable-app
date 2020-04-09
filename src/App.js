@@ -15,6 +15,7 @@ import Faq from "./pages/Faq";
 import DunkBooth from "./pages/DunkBooth";
 import Concessions from './pages/Concessions'
 import List from "./pages/List";
+import Contact from './pages/Contact'
 
 import "./App.css";
 import {
@@ -106,6 +107,7 @@ class App extends Component {
             <Route path="/Concessions/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
             <Route path="/list" exact component={List} />
+            <Route path="/Contact" exact component={Contact}/>
           </Switch>
         </div>
 
