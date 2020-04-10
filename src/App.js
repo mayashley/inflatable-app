@@ -15,6 +15,8 @@ import Faq from "./pages/Faq";
 import DunkBooth from "./pages/DunkBooth";
 import Concessions from "./pages/Concessions";
 import TablesAndChairs from "./pages/TablesAndChairs";
+import Tents from './pages/Tents';
+import Cinema from './pages/Cinema';
 import List from "./pages/List";
 import Contact from "./pages/Contact";
 
@@ -44,6 +46,8 @@ class App extends Component {
       games: [],
       concessions: [],
       tablesandchairs: [],
+      cinema:[],
+      tents:[],
     };
 
     try {
@@ -109,10 +113,11 @@ class App extends Component {
             <Route path="/Concessions" exact component={Concessions} />
             <Route path="/Concessions/:cat/:id" component={ProductTemplate} />
             <Route path="/TablesAndChairs" exact component={TablesAndChairs} />
-            <Route
-              path="/TablesAndChairs/:cat/:id"
-              component={ProductTemplate}
-            />
+            <Route path="/TablesAndChairs/:cat/:id" component={ProductTemplate} />
+            <Route path="/Cinema" exact component={Cinema} />
+            <Route path="/Cinema/:cat/:id" component={ProductTemplate} />
+            <Route path="/Tents" exact component={Tents} />
+            <Route path="/Tents/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
             <Route path="/list" exact component={List} />
             <Route path="/Contact" exact component={Contact} />

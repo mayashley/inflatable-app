@@ -1,11 +1,17 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import { connect } from "react-redux";
+import Title from '../constants/Title'
+import styles from '../css/items.module.css'
+import ItemsList from '../components/storeItems/ItemsList'
 
- const Tents = () => {
+ const Tents = ({appState}) => {
     return (
-        <Layout>
-            pop-up tents here
-        </Layout>
-    )
-}
-export default Tents
+        <div className={styles.itemsWrapper}>
+       <Title  title="Tents"/>
+       <ItemsList itemsArray={appState.contentfulData.tents}/>
+</div>
+);
+};
+export default connect(state =>({
+appState: state
+}))(Tents);

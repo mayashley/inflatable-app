@@ -1,11 +1,17 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import { connect } from "react-redux";
+import Title from '../constants/Title'
+import styles from '../css/items.module.css'
+import ItemsList from '../components/storeItems/ItemsList'
 
- const Cinema = () => {
+ const Cinema = ({appState}) => {
     return (
-        <Layout>
-            cinema page
-        </Layout>
-    )
-}
-export default Cinema
+        <div className={styles.itemsWrapper}>
+       <Title  title="Portable Cinema"/>
+       <ItemsList itemsArray={appState.contentfulData.cinema}/>
+</div>
+);
+};
+export default connect(state =>({
+appState: state
+}))(Cinema);
