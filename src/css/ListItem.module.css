@@ -1,0 +1,12 @@
+.itemContainer {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.itemText {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.smallImg {
+    height: 200px;
+    width: 250px;
+}

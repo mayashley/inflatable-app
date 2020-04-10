@@ -1,6 +1,7 @@
 import * as actionTypes from "./actionTypes";
 
 export function pushContentfulData(data) {
+  console.log('PUSHCONTENTFULDATA', data);
   return {
     type: actionTypes.PUSH_CONTENTFUL_DATA,
     data,

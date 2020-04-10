@@ -13,17 +13,17 @@ import Slides from "./pages/Slides";
 import WaterFriendly from "./pages/WaterFriendly";
 import Faq from "./pages/Faq";
 import DunkBooth from "./pages/DunkBooth";
-import Concessions from './pages/Concessions'
-import TablesAndChairs from './pages/TablesAndChairs'
+import Concessions from "./pages/Concessions";
+import TablesAndChairs from "./pages/TablesAndChairs";
 import List from "./pages/List";
-import Contact from './pages/Contact'
+import Contact from "./pages/Contact";
 
 import "./App.css";
 import {
   getContent,
   getFeaturedContent,
 } from "./redux/managers/contentfulService";
-import { pushContentfulData, contentfulError } from "./redux/actions";
+import { pushContentfulData, contentfulError, addItem } from "./redux/actions";
 import ProductTemplate from "./templates/ProductTemplate";
 
 class App extends Component {
@@ -43,7 +43,7 @@ class App extends Component {
       water: [],
       games: [],
       concessions: [],
-      tablesandchairs:[],
+      tablesandchairs: [],
     };
 
     try {
@@ -64,6 +64,7 @@ class App extends Component {
       dispatch(contentfulError(err));
       console.log("Error in fetchContent", err);
     }
+    dispatch(addItem(categoryObject.bounce[0]));
   };
 
   render() {
@@ -108,10 +109,13 @@ class App extends Component {
             <Route path="/Concessions" exact component={Concessions} />
             <Route path="/Concessions/:cat/:id" component={ProductTemplate} />
             <Route path="/TablesAndChairs" exact component={TablesAndChairs} />
-            <Route path="/TablesAndChairs/:cat/:id" component={ProductTemplate} />
+            <Route
+              path="/TablesAndChairs/:cat/:id"
+              component={ProductTemplate}
+            />
             <Route path="/Faq" exact component={Faq} />
             <Route path="/list" exact component={List} />
-            <Route path="/Contact" exact component={Contact}/>
+            <Route path="/Contact" exact component={Contact} />
           </Switch>
         </div>
 
