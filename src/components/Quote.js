@@ -97,9 +97,9 @@ class Quote extends Component {
           <h1> Get A Quote</h1>
           <p>
             Please fill out the required fields and read the Terms and Services
-            agreement at the bottom of the form.
+            agreement at the bottom of this form.
           </p>
-          <p>Your list will be attached to the inquiry automatically.</p>
+          <p>Your list of items will be attached to this quote automatically.</p>
           <div className={styles.column}>
             <div className={styles.invisItem}>
               <textarea
