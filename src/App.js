@@ -74,7 +74,7 @@ class App extends Component {
   render() {
     const { appState } = this.props;
 
-    console.log(appState.contentfulData);
+    // console.log(appState.contentfulData);
     if (appState.isLoading) {
       return (
         <div>

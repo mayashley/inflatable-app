@@ -1,0 +1,68 @@
+.container {
+  position: absolute;
+  min-height: calc(100vh - (var(--navHeight) + var(--footerHeight)));
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.form {
+  background-color: orange;
+  width: 100%;
+  max-width: 700px;
+  padding: 50px;
+  overflow: auto;
+}
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+}
+.closeButton {
+  width: 50px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.invisItem {
+    display: none;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.formItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.formControl {
+  padding-left: 5px;
+  min-width: 100px;
+  height: 30px;
+  margin: 5px 0;
+}
+.tos {
+  align-self: center;
+  background-color: white;
+}
+.checkboxText {
+    margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .form {
+    max-height: 800px;
+  }
+  .formItem {
+    flex-direction: row;
+  }
+  .formControl {
+    width: 50%;
+    margin: 0px;
+  }
+}

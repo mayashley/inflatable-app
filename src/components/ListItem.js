@@ -24,12 +24,17 @@ export default class ListItem extends Component {
   render() {
     const { selectedImg } = this.state;
     const { item } = this.props;
-    console.log(item);
     return (
       <div className={styles.itemContainer}>
-        <img className={styles.smallImg} src={selectedImg} alt="" />
-        <p className={styles.itemText}>{item.name}</p>
-        <p className={styles.itemText}>${item.price}</p>
+        <div>
+          <img className={styles.smallImg} src={selectedImg} alt="" />
+        </div>
+        <div>
+          <p className={styles.itemText}>{item.name}</p>
+        </div>
+        <div>
+          <p className={styles.itemText}>${item.price}</p>
+        </div>
       </div>
     );
   }
