@@ -1,6 +1,6 @@
-import React from "react"
-import styles from "../css/footer.module.css"
-import socialIcons from "../constants/social-icons"
+import React from "react";
+import styles from "../css/footer.module.css";
+import socialIcons from "../constants/social-icons";
 
 const Footer = () => {
   return (
@@ -16,14 +16,15 @@ const Footer = () => {
             >
               {item.icon}
             </a>
-          )
+          );
         })}
       </div>
+
       <div className={styles.copyright}>
         &copy; Southern Ohio Inflatables LLC.
         {new Date().getFullYear()}
       </div>
     </footer>
-  )
-}
-export default Footer
+  );
+};
+export default Footer;

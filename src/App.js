@@ -69,6 +69,7 @@ class App extends Component {
       console.log("Error in fetchContent", err);
     }
     dispatch(addItem(categoryObject.bounce[0]));
+    // this is where 1 item on list is hard coded for now
   };
 
   render() {

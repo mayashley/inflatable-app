@@ -1,8 +1,6 @@
 .slideContainer {
   max-width: 550px;
   margin: auto;
-  /* box-shadow: var(--lightShadow); */
-  /* background-color: rgb(182, 181, 181); */
 }
 
 .eachSlide > div {
@@ -14,13 +12,6 @@
   min-width: 500px;
   overflow: hidden;
 }
-
-/* .eachSlide span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
-} */
 
 .each-fade {
   display: flex;
