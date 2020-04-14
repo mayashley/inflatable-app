@@ -13,7 +13,7 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --navHeight: 50px;
-  /* --footerHeight: 80px; */
+  --footerHeight: 60px;
 }
 
 * {

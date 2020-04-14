@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "../css/Quote.module.css";
 import { IconContext } from "react-icons";
 import { IoMdClose } from "react-icons/io";
+import { withTheme } from "styled-components";
 
 class Quote extends Component {
   constructor(props) {
@@ -85,7 +86,7 @@ class Quote extends Component {
           <div className={styles.buttonRow}>
             <IconContext.Provider
               value={{
-                size: "20px",
+                size: "36px",
               }}
             >
               <button className={styles.closeButton} onClick={handleOnClick}>
@@ -93,6 +94,7 @@ class Quote extends Component {
               </button>
             </IconContext.Provider>
           </div>
+          <h1> Get A Quote</h1>
           <p>
             Please fill out the required fields and read the Terms and Services
             agreement at the bottom of the form.
@@ -154,7 +156,7 @@ class Quote extends Component {
                 value={phone}
                 onChange={this.handleOnChange}
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="999-888-7777"
+                placeholder="999-867-5309"
                 className={styles.formControl}
               />
             </div>
@@ -178,6 +180,7 @@ class Quote extends Component {
                 value={startTime}
                 onChange={this.handleOnChange}
                 className={styles.formControl}
+                placeholder="12:00am"
               />
             </div>
             <div className={styles.formItem}>
@@ -189,6 +192,7 @@ class Quote extends Component {
                 value={endTime}
                 onChange={this.handleOnChange}
                 className={styles.formControl}
+                placeholder="12:00pm"
               />
             </div>
             <div className={styles.formItem}>
@@ -304,10 +308,43 @@ class Quote extends Component {
               />
             </div>
           </div>
+          
           <div className={styles.tos}>
-            <p>Listen here</p>
-            <p>Listen here</p>
-            <p>Listen here</p>
+            <h3>Terms of Service</h3>
+            <p>
+              *By checking the box below, you are acknowledging that you have
+              read and understand the statements below.
+            </p>
+            <p>
+              *You have measured the area to ensure that there is adaquate space
+              available to set up equipment.
+            </p>
+            <p>
+              *You understand that the security deposit will be held if
+              equipment is returned damaged or dirty.
+            </p>
+            <p>
+              *You understand Southern Ohio inflatables retains the right to
+              cancel due to weather concerns.
+            </p>
+            <p>
+              *You understand that you will forfeit your security deposit
+              if you choose to cancel a booking unless weather conditions arise
+              and both parties agree that it is unsuitable or unsafe to proceed
+              with a booking.
+            </p>
+            <p>
+              *You understand that should you wish to change a booking, a
+              request has to made within 7 days of the event.
+            </p>
+            <p>
+              *You understand that for the inflatables the site must be clean
+              and free of grass clippings, branches, doggy poop,
+              stones(inflatables can only be set up on concrete, dirt or
+              blacktop) or anything that may puncture or rub a hole in the
+              inflatable.
+            </p>
+            <p>* You have read the FAQ page and understand the basic utility requirements for equiptment.</p>
           </div>
           <div className={styles.row}>
             <input
@@ -325,7 +362,7 @@ class Quote extends Component {
             <input
               type="submit"
               value="Submit Quote"
-              className={styles.submit}
+              className={styles.btnSec}
             />
           </div>
         </form>
