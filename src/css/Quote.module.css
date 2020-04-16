@@ -81,6 +81,7 @@ justify-content: center;
   display: inline-block;
   cursor: pointer;
   transition: var(--mainTransition);
+  margin-top: 25px;
 }
 .btnSec:hover {
 background-color: rgb(92, 92, 92);

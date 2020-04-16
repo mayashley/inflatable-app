@@ -1,18 +1,22 @@
-import './ReactotronConfig'
+import "./ReactotronConfig";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
-import thunk  from 'redux-thunk';
+
+import thunk from "redux-thunk";
 import mainReducer from "./redux/reducer";
-import Reactotron from './ReactotronConfig'
+import Reactotron from "./ReactotronConfig";
 import App from "./App";
 import "./index.css";
 
 import * as serviceWorker from "./serviceWorker";
 
 // const store = createStore(rootReducer, Reactotron.createEnhancer())
-const store = createStore(mainReducer, compose(applyMiddleware(thunk), Reactotron.createEnhancer()));
+const store = createStore(
+  mainReducer,
+  compose(applyMiddleware(thunk), Reactotron.createEnhancer())
+);
 
 ReactDOM.render(
   <React.StrictMode>

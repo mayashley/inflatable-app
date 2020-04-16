@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "../css/Quote.module.css";
 import { IconContext } from "react-icons";
 import { IoMdClose } from "react-icons/io";
-import { withTheme } from "styled-components";
 
 class Quote extends Component {
   constructor(props) {
@@ -82,6 +81,7 @@ class Quote extends Component {
           action="https://formspree.io/mvorwnwo"
           method="POST"
           className={styles.form}
+          // onSubmit={handleOnClick}
         >
           <div className={styles.buttonRow}>
             <IconContext.Provider
@@ -99,7 +99,9 @@ class Quote extends Component {
             Please fill out the required fields and read the Terms and Services
             agreement at the bottom of this form.
           </p>
-          <p>Your list of items will be attached to this quote automatically.</p>
+          <p>
+            Your list of items will be attached to this quote automatically.
+          </p>
           <div className={styles.column}>
             <div className={styles.invisItem}>
               <textarea
@@ -308,7 +310,7 @@ class Quote extends Component {
               />
             </div>
           </div>
-          
+
           <div className={styles.tos}>
             <h3>Terms of Service</h3>
             <p>
@@ -328,10 +330,10 @@ class Quote extends Component {
               cancel due to weather concerns.
             </p>
             <p>
-              *You understand that you will forfeit your security deposit
-              if you choose to cancel a booking unless weather conditions arise
-              and both parties agree that it is unsuitable or unsafe to proceed
-              with a booking.
+              *You understand that you will forfeit your security deposit if you
+              choose to cancel a booking unless weather conditions arise and
+              both parties agree that it is unsuitable or unsafe to proceed with
+              a booking.
             </p>
             <p>
               *You understand that should you wish to change a booking, a
@@ -344,7 +346,10 @@ class Quote extends Component {
               blacktop) or anything that may puncture or rub a hole in the
               inflatable.
             </p>
-            <p>* You have read the FAQ page and understand the basic utility requirements for equiptment.</p>
+            <p>
+              * You have read the FAQ page and understand the basic utility
+              requirements for equiptment.
+            </p>
           </div>
           <div className={styles.row}>
             <input

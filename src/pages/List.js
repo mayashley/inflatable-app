@@ -8,7 +8,7 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalVisible: true,
+      modalVisible: false,
     };
   }
   getTotal = () => {
@@ -29,7 +29,7 @@ class List extends Component {
   };
 
   render() {
-    const { appState } = this.props;
+    const { appState, dispatch } = this.props;
     const { modalVisible } = this.state;
 
     return (
@@ -39,7 +39,7 @@ class List extends Component {
         )}
         <div className={styles.leftColumn}>
           {appState.list.map((item, index) => {
-            return <ListItem item={item} key={index} />;
+            return <ListItem item={item} key={index} dispatch={dispatch} />;
           })}
         </div>
         <div className={styles.rightColumn}>

@@ -32,6 +32,13 @@ export function removeItem(data) {
   };
 }
 
+export function setInitialList(data) {
+  return {
+    type: actionTypes.SET_INITIAL_LIST,
+    data,
+  };
+}
+
 // export function emptyList() {
 
 // }

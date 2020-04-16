@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getImage } from "../redux/managers/contentfulService";
 import styles from "../css/template.module.css";
 import AddToListButton from "../components/AddToListButton";
-import { addItem } from "../redux/actions";
+import { addToList } from "../redux/managers/ListManager";
 
 class ProductTemplate extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class ProductTemplate extends Component {
     const { item } = this.state;
     const { dispatch } = this.props;
 
-    dispatch(addItem(item));
+    dispatch(addToList(item));
   };
 
   // To get name of array to look in use:
