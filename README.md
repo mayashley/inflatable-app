@@ -1,4 +1,11 @@
-#Southern Ohio Inflatables and Party Rental
+# Southern Ohio Inflatables and Party Rental
+
+## This website was created by @raymondCox and @mayashley for Southern Ohio Inflatables, a party rental business in Southern Ohio.
+
+### React, Redux, Contentful headless CMS hosted on Netlify. WIP, still needes perm domain and FAQ page finished for client
+
+## [See Southern Ohio Inflatables LIVE](https://happy-panini-768106.netlify.app)
+
 
 
 
