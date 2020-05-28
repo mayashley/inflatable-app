@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BounceCombo from "./pages/BounceCombo";
@@ -15,8 +15,8 @@ import Faq from "./pages/Faq";
 import DunkBooth from "./pages/DunkBooth";
 import Concessions from "./pages/Concessions";
 import TablesAndChairs from "./pages/TablesAndChairs";
-import Tents from './pages/Tents';
-import Cinema from './pages/Cinema';
+import Tents from "./pages/Tents";
+import Cinema from "./pages/Cinema";
 import List from "./pages/List";
 import Contact from "./pages/Contact";
 
@@ -25,11 +25,14 @@ import {
   getContent,
   getFeaturedContent,
 } from "./redux/managers/contentfulService";
-import { pushContentfulData, contentfulError, addItem } from "./redux/actions";
+import { pushContentfulData, contentfulError } from "./redux/actions";
 import ProductTemplate from "./templates/ProductTemplate";
+import { getListFromCookies } from "./redux/managers/ListManager";
 
 class App extends Component {
   componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(getListFromCookies());
     this.fetchContent();
   }
 
@@ -46,8 +49,8 @@ class App extends Component {
       games: [],
       concessions: [],
       tablesandchairs: [],
-      cinema:[],
-      tents:[],
+      cinema: [],
+      tents: [],
     };
 
     try {
@@ -68,8 +71,6 @@ class App extends Component {
       dispatch(contentfulError(err));
       console.log("Error in fetchContent", err);
     }
-    dispatch(addItem(categoryObject.bounce[0]));
-    // this is where 1 item on list is hard coded for now
   };
 
   render() {
@@ -114,13 +115,16 @@ class App extends Component {
             <Route path="/Concessions" exact component={Concessions} />
             <Route path="/Concessions/:cat/:id" component={ProductTemplate} />
             <Route path="/TablesAndChairs" exact component={TablesAndChairs} />
-            <Route path="/TablesAndChairs/:cat/:id" component={ProductTemplate} />
+            <Route
+              path="/TablesAndChairs/:cat/:id"
+              component={ProductTemplate}
+            />
             <Route path="/Cinema" exact component={Cinema} />
             <Route path="/Cinema/:cat/:id" component={ProductTemplate} />
             <Route path="/Tents" exact component={Tents} />
             <Route path="/Tents/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
-            <Route path="/list" exact component={List} />
+            <Route path="/list" component={List} />
             <Route path="/Contact" exact component={Contact} />
           </Switch>
         </div>

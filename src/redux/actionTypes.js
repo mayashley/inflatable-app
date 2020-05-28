@@ -3,3 +3,4 @@ export const PUSH_FEATURED_DATA = "PUSH_FEATURED_DATA";
 export const CONTENTFUL_ERROR = "CONTENTFUL_ERROR";
 export const ADD_ITEM = "ADD_ITEM";
 export const DELETE_ITEM = "DELETE_ITEM";
+export const SET_INITIAL_LIST = "SET_INITIAL_LIST";
