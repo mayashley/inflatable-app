@@ -78,7 +78,7 @@ class Quote extends Component {
     return (
       <div className={styles.container}>
         <form
-          action="https://formspree.io/mvorwnwo"
+          action="https://formspree.io/mrgagzqd"
           method="POST"
           className={styles.form}
           // onSubmit={handleOnClick}
