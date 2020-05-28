@@ -22,11 +22,11 @@
   text-transform: uppercase;
   margin-bottom: 1rem;
   padding: 1rem;
-  letter-spacing: 2px;
-  /* border-radius: 10px; */
-  /* color:  rgb(255, 123, 0); */
-  /* background-color: rgba(248, 248, 248, 0.74); */
-  /* border: 1px solid red; */
+  letter-spacing: 4px;
+  /* color: var(--mainWhite); */
+  color: rgb(247, 247, 247);
+  /* text-decoration: underline; */
+  font-family: 'Oswald', sans-serif;
 }
 
 @media screen and (min-width: 768px) {

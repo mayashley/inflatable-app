@@ -5,7 +5,7 @@ const Contact = () => {
     <section className={styles.contact}>
       <div className={styles.center}>
         <form
-          action="https://formspree.io/mvorwnwo"
+          action="https://formspree.io/mrgagzqd"
           method="POST"
           className={styles.form}
         >
@@ -35,21 +35,10 @@ const Contact = () => {
               id="message"
               rows="12"
               className={styles.formControl}
-              placeholder="Send us a detailed message and we will be pleased to assist you!."
+              placeholder="Send us a detailed message and we will be pleased to assist you OR call us anytime at (937)217-3440."
             />
           </div>
-          {/* <div className={styles.checkBoxes}>
-            <div className={styles.checkBoxesContainer}>
-            <p>
-              <input
-                required
-                type="checkbox"
-                id="agree"
-                name="Term and Conditions"
-                value="sender agrees to terms and conditions of equiptment rental"
-              />your custom agreement will go here</p>
-            </div>
-          </div> */}
+        
           <div>
             <input
               type="submit"

@@ -42,7 +42,7 @@ export const navbarData = [
     subcats: [
       { subtitle: "FAQ's", subroute: "/Faq" },
       { subtitle: "Contact Us", subroute: "/Contact" },
-      { subtitle: "Pay Deposit", subroute: "/Deposit" },
+      // { subtitle: "Pay Deposit", subroute: "/Deposit" },
     ],
   },
 ];
