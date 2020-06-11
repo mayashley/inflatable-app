@@ -9,7 +9,7 @@ const SelfPickUp = ({appState}) => {
     return (
        
            <div className={styles.itemsWrapper}>
-            <Title  title="Inflatables Avilable For Self Pick-Up"/>
+            <Title  title="Party Packages"/>
             <ItemsList itemsArray={appState.contentfulData.self}/>
     </div>
   );
