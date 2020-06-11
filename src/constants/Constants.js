@@ -15,7 +15,7 @@ export const navbarData = [
       { subtitle: "Obstacle Courses", subroute: "/ObstacleCourse" },
       { subtitle: "Water Friendly", subroute: "/WaterFriendly" },
       { subtitle: "Interactives", subroute: "/Interactives" },
-      { subtitle: "Self Pick-up Inflatables", subroute: "/SelfPickUp" },
+      { subtitle: "Party Packages", subroute: "/SelfPickUp" },
     ],
   },
   {
