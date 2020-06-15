@@ -1,4 +1,4 @@
-import { pushContentfulData, pushFeaturedData } from "../actions";
+import { pushFeaturedData } from "../actions";
 
 export function getContent() {
   const {

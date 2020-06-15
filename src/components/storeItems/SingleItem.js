@@ -31,7 +31,7 @@ class SingleItem extends Component {
   };
   render() {
     const { imgURL, imageLoaded } = this.state;
-    const { item, dispatch, location } = this.props;
+    const { item, location } = this.props;
     const { name, price, slug, type, featured } = item;
     const path = featured
       ? `featured/${type}/${slug}`

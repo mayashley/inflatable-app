@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import { MdAddCircle, MdCheckCircle } from "react-icons/md";
 import styles from "../css/AddToListButton.module.css";
