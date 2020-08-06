@@ -18,6 +18,7 @@
   justify-content: center;
   align-self: flex-end;
   margin-right: 20px;
+  
 }
 .hamburgerIcon {
   outline: none;
@@ -31,6 +32,9 @@
   /* background-color: #87ae93; */
   background-color: var(--mainWhite);
   border-top: 1px solid #888888;
+}
+.navItems:hover{
+  color:#6caa14;
 }
 /* .itemContainer {
 } */
@@ -57,11 +61,11 @@
   font-size: 14px;
 }
 .subLink:hover span {
-  /* color: #084d88; */
+  color: #6caa14;;
   /* color: var(--mainWhite); */
 }
 .itemLink:hover span {
-  /* color: #084d88; */
+  color:#6caa14;;
   /* color: var(--mainWhite); */
 }
 .itemText {
