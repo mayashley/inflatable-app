@@ -5,7 +5,9 @@ import styles from '../css/banner.module.css'
     return (
         <div className={styles.banner}>
              <div className={styles.bannerHero}>
-           <h1>{title}</h1>
+           {/* <h1>{title}</h1> */}
+          
+           
            </div>
            {children}
         </div>

@@ -30,7 +30,7 @@
     transition: var(--mainTransition);
   }
   .icons a:hover {
-    color:rgb(255, 123, 0);
+    color:#6caa14;
   }
   .copyright {
     text-transform: capitalize;

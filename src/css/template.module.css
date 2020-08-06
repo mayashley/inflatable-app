@@ -8,7 +8,7 @@
 }
 .title {
   text-transform: capitalize;
-  color: rgb(255, 123, 0);
+  color: #6caa14;
 }
 .columnLeft {
   display: flex;

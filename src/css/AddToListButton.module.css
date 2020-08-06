@@ -4,7 +4,7 @@
   align-items: center;
   height: 35px;
   width: 175px;
-  border: 1px solid rgb(255, 123, 0);
+  border: 1px solid #6caa14;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -13,7 +13,7 @@
 }
 .container p {
   font-size: 16px;
-  color: rgb(255, 123, 0);
+  color: #6caa14;
   font-weight: bold;
   margin-left: 5px;
   -webkit-touch-callout: none; /* iOS Safari */

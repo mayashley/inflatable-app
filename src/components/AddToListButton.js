@@ -6,7 +6,7 @@ import styles from "../css/AddToListButton.module.css";
 const AddToListButton = ({ added, handleOnClick }) => {
   return (
     <IconContext.Provider
-      value={{ color: added ? "green" : "rgb(255, 123, 0)", size: "20px" }}
+      value={{ color: added ? "green" : "#6caa14", size: "20px" }}
     >
       <button
         disabled={added}

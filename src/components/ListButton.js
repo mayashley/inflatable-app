@@ -7,7 +7,7 @@ import styles from "../css/ListButton.module.css";
 
 const ListButton = ({ itemCount }) => {
   return (
-    <IconContext.Provider value={{ color: "rgb(255, 123, 0)", size: "36px" }}>
+    <IconContext.Provider value={{ color: "#6caa14", size: "36px" }}>
       <Link to="/list" className={styles.container}>
         <IoIosListBox />
         <p>{itemCount} items on list</p>

@@ -4,7 +4,7 @@ import Banner from '../constants/Banner'
 
 
 
-const Img = require('../images/bounceCastle2.jpg');
+const Img = require('../images/southernOhioInflate.jpg');
 
 
  const Hero = () => {

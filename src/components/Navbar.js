@@ -92,7 +92,7 @@ class Navbar extends Component {
               className={styles.hamburgerIcon}
               isActive={showNav}
               toggleButton={this.toggleNav}
-              barColor="rgb(255, 123, 0)"
+              barColor="#6caa14"
             />
           </div>
         </div>

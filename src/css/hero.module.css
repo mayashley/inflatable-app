@@ -1,12 +1,24 @@
 
 .defaultHero {
-     background-position: center;
-     background-size: cover;
-     background-repeat: repeat no-repeat;
+     /* background-position: center; */
+     /* background-size: cover; */
+     /* background-repeat: repeat no-repeat; */
     display: flex;
+    background-color: white;
     justify-content: center;
-    width: 100vw;
-    overflow: hidden;
+    max-height: 280px;
+    min-width: 280px;
+    /* overflow: hidden;  */
     /* border: 1px solid red; */
+   }
+
+
+   @media screen and (min-width: 768px) {
+    .defaultHero{
+      max-height: 500px;
+      max-width:500px;
+    }
   }
+
+
  

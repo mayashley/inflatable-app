@@ -28,6 +28,7 @@
   min-height: 100vh;
   padding-bottom: 200px;
   overflow: scroll;
+  /* background-color: #87ae93; */
   background-color: var(--mainWhite);
   border-top: 1px solid #888888;
 }
@@ -56,10 +57,12 @@
   font-size: 14px;
 }
 .subLink:hover span {
-  color: rgb(255, 123, 0);
+  /* color: #084d88; */
+  /* color: var(--mainWhite); */
 }
 .itemLink:hover span {
-  color: rgb(255, 123, 0);
+  /* color: #084d88; */
+  /* color: var(--mainWhite); */
 }
 .itemText {
   color: black;
