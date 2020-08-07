@@ -16,17 +16,35 @@
   display: flex;
  justify-content: center;
  margin: 1rem;
+ max-width:90%;
+ background-color: var(--mainWhite);
+ padding: 10px;
 }
-.faqWrapper h2 {
+
+.faqWrapper h1 {
   /* border: 1px solid red; */
   display: flex;
-  color: rgb(88, 88, 88);
-  font-size: 1.6rem;
+  color: #6caa14;
+  /* font-size: 1.6rem; */
+}
+.faqWrapper h3 {
+  /* border: 1px solid red; */
+  display: flex;
+  color: var(--mainBlack);
+  /* font-size: 1.6rem; */
 }
 
 .faqWrapper p {
   /* border: 1px solid red; */
   display: flex;
- justify-content: center;
+ /* justify-content: center; */
  color: rgb(34, 34, 34);
+ width:90%;
 }
+
+
+@media screen and (min-width: 768px) {
+  .faqWrapper p {
+   width:700px;
+  }
+  }

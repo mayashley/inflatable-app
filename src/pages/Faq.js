@@ -16,7 +16,8 @@ const Faq = () => {
           {Questions.map((item, index) => {
             return (
               <article key={index}>
-                <h2>{item.title}</h2>
+                <h1>{item.section}</h1>
+                <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
             )
