@@ -19,6 +19,7 @@ import Tents from "./pages/Tents";
 import Cinema from "./pages/Cinema";
 import List from "./pages/List";
 import Contact from "./pages/Contact";
+import Generators from "./pages/Generators";
 
 import "./App.css";
 import {
@@ -51,6 +52,7 @@ class App extends Component {
       tablesandchairs: [],
       cinema: [],
       tents: [],
+      generator: [],
     };
 
     try {
@@ -62,7 +64,7 @@ class App extends Component {
           ...item.fields,
           type: item.sys.contentType.sys.id,
         };
-
+        // console.log(item);
         return categoryObject[item.sys.contentType.sys.id].push(dataObject);
       });
 
@@ -122,6 +124,8 @@ class App extends Component {
             <Route path="/Cinema" exact component={Cinema} />
             <Route path="/Cinema/:cat/:id" component={ProductTemplate} />
             <Route path="/Tents" exact component={Tents} />
+            <Route path="/Generators" exact component={Generators} />
+            <Route path="/Generators/:cat/:id" component={ProductTemplate} />
             <Route path="/Tents/:cat/:id" component={ProductTemplate} />
             <Route path="/Faq" exact component={Faq} />
             <Route path="/list" component={List} />

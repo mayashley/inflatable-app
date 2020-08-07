@@ -33,6 +33,7 @@ export const navbarData = [
       { subtitle: "Tables and Chairs", subroute: "/TablesAndChairs" },
       { subtitle: "Portable Cinema", subroute: "/Cinema" },
       { subtitle: "Tents", subroute: "/Tents" },
+      { subtitle: "Generators", subroute:"/Generators"},
     ],
   },
   {

@@ -17,6 +17,7 @@ const initialState = {
     slides: [],
     water: [],
     featuredItems: [],
+    generator: [],
   },
   list: [],
   isLoading: true,
