@@ -32,6 +32,17 @@
   display: flex;
   color: var(--mainBlack);
   /* font-size: 1.6rem; */
+  margin-top: -10px;
+}
+
+.faqWrapper h5 {
+  display: flex;
+  color: var(--mainBlack);
+  display: flex;
+  margin: 0;
+}
+.faqWrapper h5 a {
+  color: #084d88;
 }
 
 .faqWrapper p {
@@ -40,6 +51,7 @@
  /* justify-content: center; */
  color: rgb(34, 34, 34);
  width:90%;
+ margin:10px 0 0;
 }
 
 
