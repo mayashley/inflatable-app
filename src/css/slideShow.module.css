@@ -27,6 +27,22 @@
 }
 
 
+@media screen and (max-width: 768px) {
+  .slideContainer {
+    max-width: 350px;
+    margin: auto;
+  }
+  
+  .eachSlide > div {
+    background-size: 350px;
+    background-repeat: no-repeat;
+    height: 200px;
+    max-width: 350px;
+  }
+  .each-fade .image-container {
+    width: 100%;
+  }
+  }
 
 
 
