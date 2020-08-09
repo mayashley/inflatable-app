@@ -25,9 +25,9 @@ const About = () => {
             </p>
           </div>
         </article>
-        <div className={styles.aboutInfo}>
+        {/* <div className={styles.aboutInfo}>
         <a href="/Contact"><button>CONTACT US</button></a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

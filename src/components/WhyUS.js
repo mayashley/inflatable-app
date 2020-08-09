@@ -30,9 +30,9 @@ const WhyUS = () => {
             );
           })}
         </div>
-        <div className={styles.btnWrapper}>
+        {/* <div className={styles.btnWrapper}>
         <a href="/Contact"><button>HAVE QUESTIONS?</button></a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
