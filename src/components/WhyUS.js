@@ -31,9 +31,7 @@ const WhyUS = () => {
           })}
         </div>
         <div className={styles.btnWrapper}>
-          <button type="button" className="btn-primary">
-            Have Questions?
-          </button>
+        <a href="/Contact"><button>HAVE QUESTIONS?</button></a>
         </div>
       </div>
     </div>

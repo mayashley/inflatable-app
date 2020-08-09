@@ -42,3 +42,18 @@
   margin: 1.5rem 0;
 }
 
+.btnWrapper button {
+  /* border: 1px solid green; */
+  margin:1rem 0;
+  padding: 1rem 0.5rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border: 2px solid var(--primaryColor);
+  transition: all 0.7s;
+}
+
+.btnWrapper:hover button {
+  background: transparent;
+  color: var(--primaryColor);
+}
+

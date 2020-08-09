@@ -20,7 +20,6 @@ import Cinema from "./pages/Cinema";
 import List from "./pages/List";
 import Contact from "./pages/Contact";
 import Generators from "./pages/Generators";
-
 import "./App.css";
 import {
   getContent,

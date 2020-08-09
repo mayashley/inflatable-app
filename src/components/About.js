@@ -26,9 +26,7 @@ const About = () => {
           </div>
         </article>
         <div className={styles.aboutInfo}>
-          <button type="button" className="btn-primary">
-            Contact Us
-          </button>
+        <a href="/Contact"><button>CONTACT US</button></a>
         </div>
       </div>
     </section>
