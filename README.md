@@ -4,7 +4,7 @@
 
 ### React, Redux, Contentful headless CMS hosted on Netlify. WIP, still needes perm domain and FAQ page finished for client
 
-## [See Southern Ohio Inflatables LIVE](https://happy-panini-768106.netlify.app)
+## [See Southern Ohio Inflatables LIVE](https://southernohioinflatables.com/)
 
 
 
